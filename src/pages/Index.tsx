@@ -1,11 +1,14 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { AgentWorkflow } from "@/components/AgentWorkflow";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-background">
+      {/* Background Grid Effect */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+      
+      {/* Main Content */}
+      <div className="relative z-10">
+        <AgentWorkflow />
       </div>
     </div>
   );

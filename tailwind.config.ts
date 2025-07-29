@@ -61,7 +61,29 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				agent: {
+					glow: 'hsl(var(--agent-glow))',
+					secondary: 'hsl(var(--agent-secondary))',
+				},
+				workflow: {
+					bg: 'hsl(var(--workflow-bg))',
+				},
+				step: {
+					complete: 'hsl(var(--step-complete))',
+					active: 'hsl(var(--step-active))',
+					pending: 'hsl(var(--step-pending))',
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-glow': 'var(--gradient-glow)',
+			},
+			boxShadow: {
+				'glow': 'var(--glow-animation)',
+			},
+			fontFamily: {
+				'mono': ['JetBrains Mono', 'Consolas', 'Monaco', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +106,38 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px hsl(var(--agent-glow) / 0.5), 0 0 40px hsl(var(--agent-glow) / 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 30px hsl(var(--agent-glow) / 0.8), 0 0 60px hsl(var(--agent-glow) / 0.5)'
+					}
+				},
+				'scan-line': {
+					'0%': {
+						transform: 'translateY(-100%)'
+					},
+					'100%': {
+						transform: 'translateY(100vh)'
+					}
+				},
+				'typing': {
+					'0%': {
+						width: '0'
+					},
+					'100%': {
+						width: '100%'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'scan-line': 'scan-line 3s linear infinite',
+				'typing': 'typing 2s steps(20) infinite'
 			}
 		}
 	},
